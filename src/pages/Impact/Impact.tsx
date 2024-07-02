@@ -9,6 +9,7 @@ import imp7 from '../../assets/youmeImpactGallery7.svg'
 import imp8 from '../../assets/youmeImpactGallery8.svg'
 import imp9 from '../../assets/youmeImpactArrow1.svg'
 import imp10 from '../../assets/youmeImpactArrow2.svg'
+import { useState } from 'react'
 
 
 const ImpactGalleryData = [
@@ -59,6 +60,9 @@ const ImpactGalleryData = [
 
 
 export default function Impact() {
+
+    const [view, setView] = useState<string>('overflow-x-hidden')
+
     return (
         <section id="impact" className='flex flex-col items-center max-w-[1900px] gap-20'>
             <div id="impact__header" className='max-w-[593px] text-center'>
@@ -70,7 +74,7 @@ export default function Impact() {
                 </p>
             </div>
 
-            <div id="impact__gallery" className='flex flex-wrap gap-4 w-[1203px]'>
+            <div id="impact__gallery" className={`flex overflow-hidden flex-wrap gap-4 w-[1203px] ${view}`}>
                 {
                     ImpactGalleryData.map((data, index)=> (
                         <div key={index} className='flex flex-col'>
@@ -83,19 +87,18 @@ export default function Impact() {
                     ))
                 }
                 
-                <div className='flex gap-4 items-center justify-center w-full'>
-                    <button className='items-center gap-2 flex w-[136px] h-[45px] border-2 text-[#808080] font-semibold text-sm border-[#808080] p-[10px] box-border'>
+            </div>
+            <div className='flex gap-4 items-center justify-center w-full'>
+                    <button onClick={()=> setView('h-[210px]')} className='items-center gap-2 flex w-[136px] h-[45px] border-2 text-[#808080] font-semibold text-sm border-[#808080] p-[10px] box-border'>
                     <h6>View Less</h6> 
                     <img src={imp9}/>
 
                     </button>
-                    <button className='flex gap-2 items-center w-[136px] h-[45px] border-2 border-primaryColor font-semibold text-sm text-primaryColor p-[10px]'>
+                    <button onClick={()=> setView('h-full')} className='flex gap-2 items-center w-[136px] h-[45px] border-2 border-primaryColor font-semibold text-sm text-primaryColor p-[10px]'>
                        <h6>View More</h6> 
                         <img src={imp10}/>
                     </button>
                 </div>
-            </div>
-
         </section>
     )
 }

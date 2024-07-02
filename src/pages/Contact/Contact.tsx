@@ -17,7 +17,7 @@ export default function Contact() {
 
             <div id="youme__contact__options" className="flex max-w-[1400px]   w-full gap-12 items-center justify-center    ">
                 <div className="bg-[#FAFAFA] flex  ">
-                    <img src={cont1} />
+                    <img src={cont3} />
                     <div className="flex flex-col gap-1 p-2">
                         <h2 className="text-[#1A1A1A80] text-xs">Email</h2>
                         <h4 className="text-sm">youmefoundation@gmail.com</h4>
@@ -32,7 +32,7 @@ export default function Contact() {
 
                 </div>
                 <div className="bg-[#FAFAFA] flex  gap-1 p-2">
-                <img src={cont3} />
+                <img src={cont1} />
                     <div className="flex flex-col gap-2">
                         <h2 className="text-[#1A1A1A80] text-xs">Address</h2>
                         <h4 className="text-sm">123 Okoro Street, Benin City, Edo State, Nigeria</h4>
