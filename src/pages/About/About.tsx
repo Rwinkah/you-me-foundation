@@ -102,17 +102,18 @@ export default function About () {
 
                     </div>
 
-                    <div id='about-page__staff__body' className='flex gap-4'>
+                    <div id='about-page__staff__body' className='flex  items-center justify-center '>
                         {StaffData.map((staff, index) => (
                             // <div key={index}>
                             //     <img src={staff.img}/>
                             //     <h3>{staff.name}</h3>
                             //     <p>{staff.title}</p>
                             // </div>
-                            <StaffCard key={index} image={staff.img} title={staff.name} description={staff.title}/>
+                            <StaffCard className='pl-6' key={index} image={staff.img} title={staff.name} description={staff.title}/>
                         ))}
                     </div>
-                    <div 
+                </div>
+                <div 
                         id='home-page__C__bottom__info' 
                         className='w-4/5 flex flex-col gap-6 mt-[10rem] h-[292px] items-center justify-center mb-[10rem]'   
                         style={{backgroundImage: `url(${bottom  })`}}>
@@ -120,10 +121,6 @@ export default function About () {
                         <h2 className='text-white font-semibold text-[36px] leading-[50.4px] text-center max-w-[700px]'>Together we can achieve more. Join us and be a part of a brighter future for all</h2>
                         <button className='bg-primaryColor text-sm font-poppins font-semibold leading-[25.2px] w-fit h-fit p-[10px] text-white'>Join our course</button>
                     </div>
-
-
-
-                </div>
 
 
         </section>
